@@ -1,0 +1,8 @@
+.DS_Store
+.build/
+DerivedData/
+build/
+*.xcodeproj/xcuserdata/
+*.xcodeproj/project.xcworkspace/xcuserdata/
+# Generated per build by the ScreenBridge build phase; contains a development key.
+ScreenBridgeConnection.json

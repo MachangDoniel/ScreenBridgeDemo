@@ -1,0 +1,404 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2650BA49DA01D7AB9A670C9C /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D02CE7EE7F31410FD65C568 /* ProfileView.swift */; };
+		55519FADC912A827D46A430A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299EC1ACCB07FCB9C64579E4 /* AppDelegate.swift */; };
+		581CFAE4927EB7ABBEE28447 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697CB014479A0AE15715367D /* DashboardViewController.swift */; };
+		712C30EA7B4F201B0B9CA880 /* ScreenBridge in Frameworks */ = {isa = PBXBuildFile; productRef = B85BADAF94C4B0EB5069EC44 /* ScreenBridge */; };
+		B12E44EECDCACDFA871DFEFD /* AccountDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E05AF50CB9BE38F3299958D /* AccountDetailViewController.swift */; };
+		FAF3FEEA3C787D34E2A1EC0F /* AccountsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8B617DF23EBFB391FC2F95 /* AccountsViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0E05AF50CB9BE38F3299958D /* AccountDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountDetailViewController.swift; sourceTree = "<group>"; };
+		299EC1ACCB07FCB9C64579E4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2B8B617DF23EBFB391FC2F95 /* AccountsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountsViewController.swift; sourceTree = "<group>"; };
+		697CB014479A0AE15715367D /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
+		8D02CE7EE7F31410FD65C568 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		98E2164AABD1E142CD5CA90C /* ScreenBridgeDemo.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = ScreenBridgeDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BE83261D483A56A31631B8D7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				712C30EA7B4F201B0B9CA880 /* ScreenBridge in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		324B520855705002ED32951E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				98E2164AABD1E142CD5CA90C /* ScreenBridgeDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		35E32FDECD29FACEF0763EFA /* Accounts */ = {
+			isa = PBXGroup;
+			children = (
+				0E05AF50CB9BE38F3299958D /* AccountDetailViewController.swift */,
+				2B8B617DF23EBFB391FC2F95 /* AccountsViewController.swift */,
+			);
+			path = Accounts;
+			sourceTree = "<group>";
+		};
+		481839353767C35011ACE947 /* ScreenBridgeDemo */ = {
+			isa = PBXGroup;
+			children = (
+				35E32FDECD29FACEF0763EFA /* Accounts */,
+				EA5640EE6B11F1BC38E69C63 /* App */,
+				A1016057752D514AFF70C21D /* Dashboard */,
+				E34704346012CC35B894BC7C /* Profile */,
+			);
+			path = ScreenBridgeDemo;
+			sourceTree = "<group>";
+		};
+		A1016057752D514AFF70C21D /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				697CB014479A0AE15715367D /* DashboardViewController.swift */,
+			);
+			path = Dashboard;
+			sourceTree = "<group>";
+		};
+		AC7CC6F38F7094E6BFFE3BFD = {
+			isa = PBXGroup;
+			children = (
+				481839353767C35011ACE947 /* ScreenBridgeDemo */,
+				324B520855705002ED32951E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E34704346012CC35B894BC7C /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				8D02CE7EE7F31410FD65C568 /* ProfileView.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		EA5640EE6B11F1BC38E69C63 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				299EC1ACCB07FCB9C64579E4 /* AppDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9C3499A361074197F35356FC /* ScreenBridgeDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 753B1892C0D7F6DDE9666B43 /* Build configuration list for PBXNativeTarget "ScreenBridgeDemo" */;
+			buildPhases = (
+				E4621CFD03F7706147EB7040 /* Sources */,
+				BE83261D483A56A31631B8D7 /* Frameworks */,
+				0C6B155C4035D4C90D7C2723 /* ScreenBridge Connection */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ScreenBridgeDemo;
+			packageProductDependencies = (
+				B85BADAF94C4B0EB5069EC44 /* ScreenBridge */,
+			);
+			productName = ScreenBridgeDemo;
+			productReference = 98E2164AABD1E142CD5CA90C /* ScreenBridgeDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8403B786D422CE8F14731372 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					9C3499A361074197F35356FC = {
+						DevelopmentTeam = "";
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 1074D60DB69E427791898A62 /* Build configuration list for PBXProject "ScreenBridgeDemo" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = AC7CC6F38F7094E6BFFE3BFD;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				42D5BA703E35FAE9AB9458B4 /* XCRemoteSwiftPackageReference "ScreenBridge" */,
+			);
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 324B520855705002ED32951E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9C3499A361074197F35356FC /* ScreenBridgeDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0C6B155C4035D4C90D7C2723 /* ScreenBridge Connection */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "ScreenBridge Connection";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(TARGET_BUILD_DIR)/$(UNLOCALIZED_RESOURCES_FOLDER_PATH)/ScreenBridgeConnection.json",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# ScreenBridge — generates the development connection file (Debug only).\n# Output Files: $(TARGET_BUILD_DIR)/$(UNLOCALIZED_RESOURCES_FOLDER_PATH)/ScreenBridgeConnection.json\n# Uncheck \"Based on dependency analysis\": git state is not an Xcode-tracked input.\nSB=\"/Users/donieltripura/Library/Application Support/ScreenBridge/bin/screenbridge\"\nif [ -x \"$SB\" ]; then\n  \"$SB\" build-configure\nelse\n  echo \"warning: ScreenBridge helper is not installed. Open ScreenBridge.app once, then rebuild. The app will run without a Mac connection.\"\n  rm -f \"${SCRIPT_OUTPUT_FILE_0}\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E4621CFD03F7706147EB7040 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B12E44EECDCACDFA871DFEFD /* AccountDetailViewController.swift in Sources */,
+				FAF3FEEA3C787D34E2A1EC0F /* AccountsViewController.swift in Sources */,
+				55519FADC912A827D46A430A /* AppDelegate.swift in Sources */,
+				581CFAE4927EB7ABBEE28447 /* DashboardViewController.swift in Sources */,
+				2650BA49DA01D7AB9A670C9C /* ProfileView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		0D66E2ADF3C4B7C92E3F94F5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		284E58CF839747AD932B9C95 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		CBBF54D295D563E35FDC0813 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				INFOPLIST_FILE = Generated/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.screenbridge.demo;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		D2AAC601D6A52EF78428EC8D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				INFOPLIST_FILE = Generated/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.screenbridge.demo;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1074D60DB69E427791898A62 /* Build configuration list for PBXProject "ScreenBridgeDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0D66E2ADF3C4B7C92E3F94F5 /* Debug */,
+				284E58CF839747AD932B9C95 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		753B1892C0D7F6DDE9666B43 /* Build configuration list for PBXNativeTarget "ScreenBridgeDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D2AAC601D6A52EF78428EC8D /* Debug */,
+				CBBF54D295D563E35FDC0813 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		42D5BA703E35FAE9AB9458B4 /* XCRemoteSwiftPackageReference "ScreenBridge" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/MachangDoniel/ScreenBridge.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B85BADAF94C4B0EB5069EC44 /* ScreenBridge */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 42D5BA703E35FAE9AB9458B4 /* XCRemoteSwiftPackageReference "ScreenBridge" */;
+			productName = ScreenBridge;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 8403B786D422CE8F14731372 /* Project object */;
+}
