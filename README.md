@@ -2,6 +2,19 @@
 
 An example iOS app that shows how to integrate [ScreenBridge](https://github.com/MachangDoniel/ScreenBridge), the development-only inspector that maps on-screen UI to registered Swift source, captures annotated screenshots and sends reports to your Mac for Claude.
 
+<table>
+  <tr>
+    <td align="center"><img src="Screenshots/01-floating-button.png" width="200" alt="Demo app with floating ScreenBridge button"><br><sub>Accounts + floating inspector</sub></td>
+    <td align="center"><img src="Screenshots/03-element-source.png" width="200" alt="Reusable cell label resolved to AccountCell"><br><sub>Reusable cell → <code>AccountCell</code></sub></td>
+    <td align="center"><img src="Screenshots/06-swiftui.png" width="200" alt="SwiftUI toggle resolved to ProfileView.swift"><br><sub>SwiftUI → <code>ProfileView.swift</code></sub></td>
+  </tr>
+  <tr>
+    <td align="center"><img src="Screenshots/02-inspector.png" width="200" alt="Inspector sheet"><br><sub>Inspector</sub></td>
+    <td align="center"><img src="Screenshots/04-annotate.png" width="200" alt="Annotation and redaction"><br><sub>Annotate + redact</sub></td>
+    <td align="center"><img src="Screenshots/05-sent.png" width="200" alt="Report acknowledged"><br><sub>Sent to Mac</sub></td>
+  </tr>
+</table>
+
 | Screen | Demonstrates |
 |---|---|
 | **Accounts** (`Accounts/AccountsViewController.swift`) | `UITableView` with reusable cells registered per index path (`cell.screenBridgeSource(_:at:in:)`), navigation push |
