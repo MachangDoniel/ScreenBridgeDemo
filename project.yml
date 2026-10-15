@@ -7,7 +7,7 @@ options:
 packages:
   ScreenBridge:
     url: https://github.com/MachangDoniel/ScreenBridge.git
-    from: 0.1.0
+    minorVersion: 0.1.0
 targets:
   ScreenBridgeDemo:
     type: application

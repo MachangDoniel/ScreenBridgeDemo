@@ -29,7 +29,7 @@ An example iOS app that shows how to integrate [ScreenBridge](https://github.com
    ```bash
    git clone https://github.com/MachangDoniel/ScreenBridge.git && ./ScreenBridge/Scripts/install-helper.sh
    ```
-2. Open `ScreenBridgeDemo.xcodeproj`. Xcode resolves the `ScreenBridge` package (`from: 0.1.0`) from GitHub.
+2. Open `ScreenBridgeDemo.xcodeproj`. Xcode resolves the `ScreenBridge` package (Up to Next Minor from `0.1.0`) from GitHub.
 3. For a physical device, set your Team under **Signing & Capabilities** (and change the bundle ID if needed).
 4. Run the **Debug** configuration. The `ScreenBridge Connection` build phase writes the connection file; check the build log for `note: ScreenBridge: configured …`.
 5. Tap the floating viewfinder button → **Inspect an element** / **Screen source** / **Report a change** → **Send to Mac**. Allow Local Network access on the first run on a device.
