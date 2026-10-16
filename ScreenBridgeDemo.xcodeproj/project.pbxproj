@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		009A5F861D676C80190C12C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A10089F0A98C738FF915D471 /* Assets.xcassets */; };
 		2650BA49DA01D7AB9A670C9C /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D02CE7EE7F31410FD65C568 /* ProfileView.swift */; };
+		39383FCF548A0C2D2DE92882 /* DebugWorkspaceUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF47A53D4EA2658D069DB267 /* DebugWorkspaceUITests.swift */; };
 		55519FADC912A827D46A430A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299EC1ACCB07FCB9C64579E4 /* AppDelegate.swift */; };
 		581CFAE4927EB7ABBEE28447 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697CB014479A0AE15715367D /* DashboardViewController.swift */; };
 		712C30EA7B4F201B0B9CA880 /* ScreenBridge in Frameworks */ = {isa = PBXBuildFile; productRef = B85BADAF94C4B0EB5069EC44 /* ScreenBridge */; };
@@ -15,13 +17,27 @@
 		FAF3FEEA3C787D34E2A1EC0F /* AccountsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8B617DF23EBFB391FC2F95 /* AccountsViewController.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		D899AAA00A4883EE8D38E9C4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8403B786D422CE8F14731372 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9C3499A361074197F35356FC;
+			remoteInfo = ScreenBridgeDemo;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		0E05AF50CB9BE38F3299958D /* AccountDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountDetailViewController.swift; sourceTree = "<group>"; };
+		2886CC87EB6112BDCAE4BBD9 /* ScreenBridge */ = {isa = PBXFileReference; lastKnownFileType = folder; name = ScreenBridge; path = ../ScreenBridge; sourceTree = SOURCE_ROOT; };
 		299EC1ACCB07FCB9C64579E4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2B8B617DF23EBFB391FC2F95 /* AccountsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountsViewController.swift; sourceTree = "<group>"; };
 		697CB014479A0AE15715367D /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		8D02CE7EE7F31410FD65C568 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		98E2164AABD1E142CD5CA90C /* ScreenBridgeDemo.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = ScreenBridgeDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A10089F0A98C738FF915D471 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AF47A53D4EA2658D069DB267 /* DebugWorkspaceUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugWorkspaceUITests.swift; sourceTree = "<group>"; };
+		B1C464D292249A3D1400010E /* ScreenBridgeDemoUITests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = ScreenBridgeDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +56,7 @@
 			isa = PBXGroup;
 			children = (
 				98E2164AABD1E142CD5CA90C /* ScreenBridgeDemo.app */,
+				B1C464D292249A3D1400010E /* ScreenBridgeDemoUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -56,12 +73,29 @@
 		481839353767C35011ACE947 /* ScreenBridgeDemo */ = {
 			isa = PBXGroup;
 			children = (
+				A10089F0A98C738FF915D471 /* Assets.xcassets */,
 				35E32FDECD29FACEF0763EFA /* Accounts */,
 				EA5640EE6B11F1BC38E69C63 /* App */,
 				A1016057752D514AFF70C21D /* Dashboard */,
 				E34704346012CC35B894BC7C /* Profile */,
 			);
 			path = ScreenBridgeDemo;
+			sourceTree = "<group>";
+		};
+		6E551E113A6952D4237D7A86 /* ScreenBridgeDemoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				AF47A53D4EA2658D069DB267 /* DebugWorkspaceUITests.swift */,
+			);
+			path = ScreenBridgeDemoUITests;
+			sourceTree = "<group>";
+		};
+		71FFAB15105F67C91EB36C0C /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				2886CC87EB6112BDCAE4BBD9 /* ScreenBridge */,
+			);
+			name = Packages;
 			sourceTree = "<group>";
 		};
 		A1016057752D514AFF70C21D /* Dashboard */ = {
@@ -75,7 +109,9 @@
 		AC7CC6F38F7094E6BFFE3BFD = {
 			isa = PBXGroup;
 			children = (
+				71FFAB15105F67C91EB36C0C /* Packages */,
 				481839353767C35011ACE947 /* ScreenBridgeDemo */,
+				6E551E113A6952D4237D7A86 /* ScreenBridgeDemoUITests */,
 				324B520855705002ED32951E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -99,11 +135,30 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		85883D4189149F6E2C56E2EF /* ScreenBridgeDemoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8CC7C7876F060466395D1484 /* Build configuration list for PBXNativeTarget "ScreenBridgeDemoUITests" */;
+			buildPhases = (
+				A99B8F30B1AABE9DE5A3C972 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				51A75D8212724EE4F34F08EC /* PBXTargetDependency */,
+			);
+			name = ScreenBridgeDemoUITests;
+			packageProductDependencies = (
+			);
+			productName = ScreenBridgeDemoUITests;
+			productReference = B1C464D292249A3D1400010E /* ScreenBridgeDemoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		9C3499A361074197F35356FC /* ScreenBridgeDemo */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 753B1892C0D7F6DDE9666B43 /* Build configuration list for PBXNativeTarget "ScreenBridgeDemo" */;
 			buildPhases = (
 				E4621CFD03F7706147EB7040 /* Sources */,
+				9F0CE86E9B59E056D8EBE551 /* Resources */,
 				BE83261D483A56A31631B8D7 /* Frameworks */,
 				0C6B155C4035D4C90D7C2723 /* ScreenBridge Connection */,
 			);
@@ -128,8 +183,12 @@
 				BuildIndependentTargetsInParallel = YES;
 				LastUpgradeCheck = 1430;
 				TargetAttributes = {
+					85883D4189149F6E2C56E2EF = {
+						DevelopmentTeam = W49J7LTUV4;
+						TestTargetID = 9C3499A361074197F35356FC;
+					};
 					9C3499A361074197F35356FC = {
-						DevelopmentTeam = "";
+						DevelopmentTeam = W49J7LTUV4;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -144,7 +203,7 @@
 			mainGroup = AC7CC6F38F7094E6BFFE3BFD;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				42D5BA703E35FAE9AB9458B4 /* XCRemoteSwiftPackageReference "ScreenBridge" */,
+				C310C8819074BA97D176B4C4 /* XCLocalSwiftPackageReference "../ScreenBridge" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 324B520855705002ED32951E /* Products */;
@@ -152,9 +211,21 @@
 			projectRoot = "";
 			targets = (
 				9C3499A361074197F35356FC /* ScreenBridgeDemo */,
+				85883D4189149F6E2C56E2EF /* ScreenBridgeDemoUITests */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9F0CE86E9B59E056D8EBE551 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				009A5F861D676C80190C12C3 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
 		0C6B155C4035D4C90D7C2723 /* ScreenBridge Connection */ = {
@@ -180,6 +251,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		A99B8F30B1AABE9DE5A3C972 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				39383FCF548A0C2D2DE92882 /* DebugWorkspaceUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E4621CFD03F7706147EB7040 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -193,6 +272,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		51A75D8212724EE4F34F08EC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9C3499A361074197F35356FC /* ScreenBridgeDemo */;
+			targetProxy = D899AAA00A4883EE8D38E9C4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		0D66E2ADF3C4B7C92E3F94F5 /* Debug */ = {
@@ -314,6 +401,46 @@
 			};
 			name = Release;
 		};
+		90F0DDDCE4C68E91C3481BFB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = W49J7LTUV4;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = dev.screenbridge.demo.uitests;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ScreenBridgeDemo;
+			};
+			name = Debug;
+		};
+		C6A3C418B4715D1057AF25E4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = W49J7LTUV4;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = dev.screenbridge.demo.uitests;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ScreenBridgeDemo;
+			};
+			name = Release;
+		};
 		CBBF54D295D563E35FDC0813 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -321,7 +448,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = W49J7LTUV4;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				INFOPLIST_FILE = Generated/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -343,7 +470,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = W49J7LTUV4;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				INFOPLIST_FILE = Generated/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -379,23 +506,27 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
+		8CC7C7876F060466395D1484 /* Build configuration list for PBXNativeTarget "ScreenBridgeDemoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				90F0DDDCE4C68E91C3481BFB /* Debug */,
+				C6A3C418B4715D1057AF25E4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
 /* End XCConfigurationList section */
 
-/* Begin XCRemoteSwiftPackageReference section */
-		42D5BA703E35FAE9AB9458B4 /* XCRemoteSwiftPackageReference "ScreenBridge" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/MachangDoniel/ScreenBridge.git";
-			requirement = {
-				kind = upToNextMinorVersion;
-				minimumVersion = 0.1.0;
-			};
+/* Begin XCLocalSwiftPackageReference section */
+		C310C8819074BA97D176B4C4 /* XCLocalSwiftPackageReference "../ScreenBridge" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = ../ScreenBridge;
 		};
-/* End XCRemoteSwiftPackageReference section */
+/* End XCLocalSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
 		B85BADAF94C4B0EB5069EC44 /* ScreenBridge */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 42D5BA703E35FAE9AB9458B4 /* XCRemoteSwiftPackageReference "ScreenBridge" */;
 			productName = ScreenBridge;
 		};
 /* End XCSwiftPackageProductDependency section */

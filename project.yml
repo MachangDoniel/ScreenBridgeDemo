@@ -6,8 +6,7 @@ options:
   createIntermediateGroups: true
 packages:
   ScreenBridge:
-    url: https://github.com/MachangDoniel/ScreenBridge.git
-    minorVersion: 0.1.0
+    path: ../ScreenBridge
 targets:
   ScreenBridgeDemo:
     type: application
@@ -38,13 +37,14 @@ targets:
     settings:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: dev.screenbridge.demo
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
         MARKETING_VERSION: 1.0.0
         CURRENT_PROJECT_VERSION: 1
         SWIFT_VERSION: "6.0"
         TARGETED_DEVICE_FAMILY: "1,2"
         # The ScreenBridge phase reads git state and ~/Library/Application Support/ScreenBridge.
         ENABLE_USER_SCRIPT_SANDBOXING: NO
-        DEVELOPMENT_TEAM: ""
+        DEVELOPMENT_TEAM: W49J7LTUV4
         CODE_SIGN_STYLE: Automatic
     postBuildScripts:
       - name: ScreenBridge Connection
@@ -62,3 +62,27 @@ targets:
             echo "warning: ScreenBridge helper is not installed. Open ScreenBridge.app once, then rebuild. The app will run without a Mac connection."
             rm -f "${SCRIPT_OUTPUT_FILE_0}"
           fi
+
+  ScreenBridgeDemoUITests:
+    deploymentTarget: "17.0"
+    type: bundle.ui-testing
+    platform: iOS
+    sources:
+      - ScreenBridgeDemoUITests
+    dependencies:
+      - target: ScreenBridgeDemo
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: dev.screenbridge.demo.uitests
+        GENERATE_INFOPLIST_FILE: YES
+        SWIFT_VERSION: "6.0"
+        DEVELOPMENT_TEAM: W49J7LTUV4
+schemes:
+  ScreenBridgeDemo:
+    build:
+      targets:
+        ScreenBridgeDemo: all
+        ScreenBridgeDemoUITests: [test]
+    test:
+      targets:
+        - ScreenBridgeDemoUITests

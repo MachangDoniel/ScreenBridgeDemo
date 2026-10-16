@@ -29,10 +29,10 @@ An example iOS app that shows how to integrate [ScreenBridge](https://github.com
    ```bash
    git clone https://github.com/MachangDoniel/ScreenBridge.git && ./ScreenBridge/Scripts/install-helper.sh
    ```
-2. Open `ScreenBridgeDemo.xcodeproj`. Xcode resolves the `ScreenBridge` package (Up to Next Minor from `0.1.0`) from GitHub.
+2. Open `ScreenBridgeDemo.xcodeproj`. This development checkout uses the sibling `../ScreenBridge` package so local framework changes appear immediately. Keep both folders next to each other.
 3. For a physical device, set your Team under **Signing & Capabilities** (and change the bundle ID if needed).
 4. Run the **Debug** configuration. The `ScreenBridge Connection` build phase writes the connection file; check the build log for `note: ScreenBridge: configured …`.
-5. Tap the floating viewfinder button → **Inspect an element** / **Screen source** / **Report a change** → **Send to Mac**. Allow Local Network access on the first run on a device.
+5. Tap the floating viewfinder button for the top drawing/selection toolbar. Use **More** for logs and source details, then **Send to Claude** to choose evidence and a destination (Claude Code is the default). Allow Local Network access on the first run on a device.
 
 ## What the integration needs (already done here)
 
@@ -50,4 +50,4 @@ This archives the app in Release (unsigned) and fails if the bundle contains the
 
 ## Project generation
 
-`ScreenBridgeDemo.xcodeproj` is generated from `project.yml` with [XcodeGen](https://github.com/yonaskolb/XcodeGen) and committed so you can open it directly. After editing `project.yml`, run `xcodegen generate`. To work on the framework against this demo, change the package in `project.yml` to `path: ../ScreenBridge` and regenerate.
+`ScreenBridgeDemo.xcodeproj` is generated from `project.yml` with [XcodeGen](https://github.com/yonaskolb/XcodeGen) and committed so you can open it directly. After editing `project.yml`, run `xcodegen generate`. The package currently uses `path: ../ScreenBridge` for local development. To distribute the demo independently, switch that entry to the GitHub URL and a released version that includes the floating workspace, then regenerate. The checked-in signing team matches the existing local Xcode project.
