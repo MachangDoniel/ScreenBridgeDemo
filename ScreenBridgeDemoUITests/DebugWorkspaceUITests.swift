@@ -2,6 +2,20 @@ import XCTest
 
 final class DebugWorkspaceUITests: XCTestCase {
     @MainActor
+    func testSendKeepsFocusedToolDefault() {
+        let app = XCUIApplication()
+        app.launch()
+        XCTAssertTrue(app.buttons["screenbridge.icon"].waitForExistence(timeout: 10))
+        app.buttons["screenbridge.icon"].tap()
+        app.coordinate(withNormalizedOffset: CGVector(dx: 0.5, dy: 0.5)).tap()
+        XCTAssertTrue(app.buttons["screenbridge.send"].waitForExistence(timeout: 5))
+        app.buttons["screenbridge.send"].tap()
+        let destination = app.buttons.matching(NSPredicate(format: "label CONTAINS %@", "Open on Mac")).firstMatch
+        for _ in 0..<3 where !destination.isHittable { app.swipeUp() }
+        XCTAssertTrue(destination.label.contains("Paste into focused AI tool"))
+    }
+
+    @MainActor
     func testDefaultSelectionPinchAndDeleteAll() throws {
         let app = XCUIApplication()
         app.launch()
@@ -76,7 +90,7 @@ final class DebugWorkspaceUITests: XCTestCase {
         XCTAssertTrue(app.buttons["Select"].exists)
         XCTAssertFalse(app.buttons["Area"].exists)
         XCTAssertFalse(app.buttons["screenbridge.send"].exists)
-        XCTAssertFalse(app.buttons["screenbridge.claude"].exists)
+        XCTAssertFalse(app.buttons["screenbridge.ai-tools"].exists)
         XCTAssertTrue(app.buttons["Redo"].exists)
         XCTAssertFalse(app.buttons["Colors"].exists)
         app.buttons["screenbridge.more"].tap()
@@ -89,7 +103,7 @@ final class DebugWorkspaceUITests: XCTestCase {
         start.press(forDuration: 0.05, thenDragTo: end)
         XCTAssertTrue(app.buttons["Undo"].isEnabled)
         XCTAssertTrue(app.buttons["screenbridge.send"].exists)
-        XCTAssertTrue(app.buttons["screenbridge.claude"].exists)
+        XCTAssertTrue(app.buttons["screenbridge.ai-tools"].exists)
         app.buttons["Undo"].tap()
         XCTAssertFalse(app.buttons["screenbridge.send"].exists)
         XCTAssertTrue(app.buttons["Redo"].isEnabled)
@@ -101,19 +115,20 @@ final class DebugWorkspaceUITests: XCTestCase {
         add(toolbar)
         app.buttons["screenbridge.more"].tap()
         let logs = app.buttons.containing(.staticText, identifier: "App logs").firstMatch
+        for _ in 0..<3 where !app.staticTexts["App logs"].firstMatch.isHittable { app.swipeUp() }
         // NavigationLink may be exposed as a cell rather than a button on older iOS.
         if logs.waitForExistence(timeout: 3) { logs.tap() }
         else { app.staticTexts["App logs"].firstMatch.tap() }
         XCTAssertTrue(app.staticTexts["App launched"].waitForExistence(timeout: 5))
         app.buttons["Close"].tap()
-        app.buttons["screenbridge.claude"].tap()
+        app.buttons["screenbridge.send"].tap()
         XCTAssertTrue(app.staticTexts["Include in report"].waitForExistence(timeout: 5))
         let screenshotToggle = app.switches["Screenshots and annotations"]
         if !screenshotToggle.isHittable { app.swipeUp() }
         XCTAssertTrue(screenshotToggle.exists)
         let destination = app.buttons.matching(NSPredicate(format: "label CONTAINS %@", "Open on Mac")).firstMatch
         if !destination.isHittable { app.swipeUp() }
-        XCTAssertTrue(destination.label.contains("Claude Code"))
+        XCTAssertTrue(destination.label.contains("Paste into focused AI tool"))
         let attachment = XCTAttachment(screenshot: app.screenshot())
         attachment.name = "Report evidence choices"
         attachment.lifetime = .keepAlways
@@ -178,10 +193,11 @@ final class DebugWorkspaceUITests: XCTestCase {
         app.launch()
         XCTAssertTrue(app.buttons["screenbridge.icon"].waitForExistence(timeout: 10))
         app.buttons["screenbridge.icon"].tap()
-        XCTAssertFalse(app.buttons["screenbridge.claude"].exists)
+        XCTAssertFalse(app.buttons["screenbridge.ai-tools"].exists)
         app.coordinate(withNormalizedOffset: CGVector(dx: 0.5, dy: 0.5)).tap()
-        XCTAssertTrue(app.buttons["screenbridge.claude"].waitForExistence(timeout: 5))
-        app.buttons["screenbridge.claude"].tap()
+        XCTAssertTrue(app.buttons["screenbridge.ai-tools"].waitForExistence(timeout: 5))
+        app.buttons["screenbridge.ai-tools"].tap()
+        app.buttons["Claude Code"].tap()
         let destination = app.buttons.matching(NSPredicate(format: "label CONTAINS %@", "Open on Mac")).firstMatch
         for _ in 0..<3 where !destination.isHittable { app.swipeUp() }
         XCTAssertTrue(destination.label.contains("Claude Code"))
